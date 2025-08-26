@@ -1,6 +1,6 @@
 LIBFT		= libft/
 LIB_A		=${LIBFT}/libft.a
-
+MLX_COMMIT	= ee35297
 LIBMLX		= MLX42/
 
 #Sources
@@ -201,6 +201,7 @@ ${NAME_2}:		${OBJS_BONUS} ${LIB_A}
 ${LIBMLX}:
 				@echo "${CYAN}${ITALIC}Cloning of MLX42 Codam...${RESET}"
 				@git clone https://github.com/codam-coding-college/MLX42.git $@
+				@cd $@ && git checkout ${MLX_COMMIT}
 				@echo "${CYAN}Clonne is ready !!!${RESET}"
 
 .PHONY:			all clean fclean re libmlx bonus head rebonus
